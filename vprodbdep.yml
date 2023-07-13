@@ -18,7 +18,8 @@ spec:
         - name: vprodb
           image: vic442/vprofiledb:latest
           args:
-            - "--ignore-db-dir=lost+found"
+            - "--ignore-db-dir"
+            - "lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
